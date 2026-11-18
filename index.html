@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Car Racing</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"
+        }
+    }
+    </script>
+</head>
+<body>
+
+    <div id="gameContainer"></div>
+
+    <header class="hud">
+        <div class="hud-box">
+            <h2>🏎️ RACING GAME</h2>
+            <p>Skor: <span id="score">0</span></p>
+            <p>Kecepatan: <span id="speed">0</span> KM/H</p>
+        </div>
+
+        <div class="hud-box level-box">
+            <p>LEVEL</p>
+            <h2 id="level">1</h2>
+        </div>
+    </header>
+
+    <!-- GARASI DAN MENU GAME -->
+    <section id="menu" class="menu">
+        <h1>3D CAR RACING</h1>
+        <p class="subtitle">Pilih mobil favoritmu dan mulai balapan!</p>
+
+        <div class="garage">
+            <div class="garage-section">
+                <h3>🚘 MOBIL PEMAIN</h3>
+
+                <label>Desain mobil</label>
+                <select id="playerDesign">
+                    <option value="supercar">Supercar</option>
+                    <option value="sport">Sport Car</option>
+                    <option value="formula">Formula 1</option>
+                    <option value="future">Futuristik</option>
+                </select>
+
+                <label>Warna mobil</label>
+                <select id="playerColor">
+                    <option value="red">Merah</option>
+                    <option value="blue">Biru</option>
+                    <option value="black">Hitam</option>
+                    <option value="white">Putih</option>
+                    <option value="yellow">Kuning</option>
+                    <option value="green">Hijau</option>
+                </select>
+            </div>
+
+            <div class="garage-section">
+                <h3>🚗 MOBIL MUSUH</h3>
+
+                <label>Desain mobil</label>
+                <select id="enemyDesign">
+                    <option value="sport">Sport Car</option>
+                    <option value="supercar">Supercar</option>
+                    <option value="formula">Formula 1</option>
+                    <option value="future">Futuristik</option>
+                </select>
+
+                <label>Warna mobil</label>
+                <select id="enemyColor">
+                    <option value="black">Hitam</option>
+                    <option value="red">Merah</option>
+                    <option value="blue">Biru</option>
+                    <option value="white">Putih</option>
+                    <option value="yellow">Kuning</option>
+                    <option value="green">Hijau</option>
+                </select>
+            </div>
+        </div>
+
+        <p class="instruction">
+            Kontrol: ← → atau A dan D untuk menghindari mobil musuh.
+        </p>
+
+        <button id="startButton" class="start-button">
+            MULAI BALAPAN
+        </button>
+    </section>
+
+    <button id="musicButton" class="music-button">
+        🔊 MUSIK ON
+    </button>
+
+    <div class="mobile-controls">
+        <button id="leftButton">⬅️</button>
+        <button id="rightButton">➡️</button>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
+
+
